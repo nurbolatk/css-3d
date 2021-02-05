@@ -17,7 +17,7 @@ body {
   font-size: 1.6rem;
   /* background-color: #fafafa; */
   font-family: Arial, Helvetica, sans-serif;
-  padding: 50px;
+  padding: 150px;
 }
 
 .scene {
@@ -82,5 +82,5 @@ body {
 }
 
 .cube.show-back {
-  transform: translateZ(-100px) rotateY(120deg);
+  transform: translateZ(-100px) rotateX(-20deg) rotateY(-30deg);
 }
