@@ -43,6 +43,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cube__face--half {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* opacity: 0.75; */
   /* color: white; */
 }
@@ -67,9 +79,18 @@ body {
   transform: rotateY(90deg) translateZ(100px);
 }
 
-.cube__face--top {
+.cube__face--top-1 {
   background: rgba(135, 207, 235, 0.7);
   transform: rotateX(90deg) translateZ(100px);
+  transition: transform 1s;
+  transform-origin: left;
+}
+
+.cube__face--top-2 {
+  background: rgba(135, 207, 235, 0.7);
+  transition: transform 1s;
+  transform: rotateX(90deg) translateZ(100px) translateX(100px);
+  transform-origin: right;
 }
 
 .cube__face--bottom {
@@ -83,4 +104,16 @@ body {
 
 .cube.show-back {
   transform: translateZ(-100px) rotateX(-20deg) rotateY(-30deg);
+}
+
+.cube.open .cube__face--top-1 {
+  transform: rotateX(90deg) translateZ(100px) rotateY(-90deg);
+}
+
+.cube.open .cube__face--top-2 {
+  transform: rotateX(90deg) translateZ(100px) translateX(100px) rotateY(90deg);
+}
+
+.open-box {
+  margin-top: 100px;
 }
