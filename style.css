@@ -99,7 +99,7 @@ body {
 }
 
 .cube {
-  transition: transform 1s;
+  transition: transform 0.3s;
 }
 
 .cube.show-back {
